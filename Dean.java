@@ -1,4 +1,4 @@
-public class CodeWarrior extends Adventurer{
+public class Dean extends Adventurer{
   int caffeine, caffeineMax;
   String preferredLanguage;
 
