@@ -1,25 +1,25 @@
-public class CodeWarrior extends Adventurer{
+public class HistoryNerd extends Adventurer{
   int caffeine, caffeineMax;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public CodeWarrior(String name, int hp, String language){
+  public HistoryNerd(String name, int hp, String language){
     super(name,hp);
     caffeineMax = 12;
     caffeine = caffeineMax/2;
     preferredLanguage = language;
   }
 
-  public CodeWarrior(String name, int hp){
+  public HistoryNerd(String name, int hp){
     this(name,hp,"c++");
   }
 
-  public CodeWarrior(String name){
+  public HistoryNerd(String name){
     this(name,24);
   }
 
-  public CodeWarrior(){
+  public HistoryNerd(){
     this("Carmack");
   }
 
