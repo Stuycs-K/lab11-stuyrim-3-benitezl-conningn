@@ -1,13 +1,13 @@
 public class Dean extends Adventurer{
-  int caffeine, caffeineMax;
+  int happiness, happinessMax;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public Dean(String name, int hp, String language){
     super(name,hp);
-    caffeineMax = 12;
-    caffeine = caffeineMax/2;
+    happinessMax = 12;
+    happiness = happinessMax/2;
     preferredLanguage = language;
   }
 
@@ -29,24 +29,24 @@ public class Dean extends Adventurer{
   }
 
   public int getSpecial(){
-    return caffeine;
+    return happiness;
   }
 
   public void setSpecial(int n){
-    caffeine = n;
+    happiness = n;
   }
 
   public int getSpecialMax(){
-    return caffeineMax;
+    return happinessMax;
   }
 
-  /*Deal 2-7 damage to opponent, restores 2 caffeine*/
+  /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
     return "";
   }
 
-  /*Deal 3-12 damage to opponent, only if caffeine is high enough.
-  *Reduces caffeine by 8.
+  /*Deal 3-12 damage to opponent, only if happiness is high enough.
+  *Reduces happiness by 8.
   */
   public String specialAttack(Adventurer other){
     return "";
