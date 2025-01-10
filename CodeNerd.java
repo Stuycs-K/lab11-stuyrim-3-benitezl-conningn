@@ -1,12 +1,12 @@
 public class CodeNerd extends Adventurer{
-  int caffeine, caffeineMax;
+  int happiness, happinessMax;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public CodeNerd(String name, int hp, String language){
     super(name,hp);
-    caffeineMax = 12;
+    caffeineMax = 10;
     caffeine = caffeineMax/2;
     preferredLanguage = language;
   }
