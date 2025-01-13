@@ -12,18 +12,15 @@ public class Game{
   //Display the borders of your screen that will not change.
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    System.out.println("\033[107m\033[30m");
   }
 
   //Display a line of text starting at
   //(columns and rows start at 1 (not zero) in the terminal)
   //use this method in your other text drawing methods to make things simpler.
-  public static void drawText(String s,int startRow, int startCol){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  public static void drawText(String s, int startRow, int startCol) {
+    System.out.print("\033[" + startRow + ";" + startCol + "H");
+    System.out.print(s);
   }
 
   /*Use this method to place text on the screen at a particular location.
@@ -36,10 +33,26 @@ public class Game{
   *@param width the number of characters per row
   *@param height the number of rows
   */
-  public static void TextBox(int row, int col, int width, int height, String text){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  public static void TextBox(int row, int col, int width, int height, String text) {
+    String[] words = text.split(" ");
+    int currentRow = row;
+    int currentCol = col;
+
+    for (String word : words) {
+      if (currentCol + word.length() > col + width) {
+        currentRow++;
+        currentCol = col;
+      }
+      if (currentRow >= row + height) {
+        break;
+      }
+      drawText(word + " ", currentRow, currentCol);
+      currentCol += word.length() + 1;
+    }
+
+    for (int i = currentRow; i < row + height; i++) {
+      drawText(" ".repeat(width), i, col);
+    }
   }
 
 
@@ -60,12 +73,25 @@ public class Game{
     *Caffeine: 20 Mana: 10   Snark: 1
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
-    public static void drawParty(ArrayList<Adventurer> party,int startRow){
+    public static void drawParty(ArrayList<Adventurer> party, int startRow) {
+    if (party.size() > 4) return;
 
-      /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-      //YOUR CODE HERE
-      /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    StringBuilder[] lines = new StringBuilder[4];
+    for (int i = 0; i < lines.length; i++) {
+      lines[i] = new StringBuilder();
     }
+
+    for (Adventurer adventurer : party) {
+      lines[0].append(adventurer.getName()).append("     ");
+      lines[1].append("HP: ").append(adventurer.getHP()).append("   ");
+      lines[2].append(adventurer.getSpecial()).append(": ").append(adventurer.getSpecialStatValue()).append("   ");
+    }
+
+    for (int i = 0; i < 3; i++) {
+      drawText(lines[i].toString(), startRow + i, 1);
+    }
+    drawText("***THIS ROW INTENTIONALLY LEFT BLANK***", startRow + 3, 1);
+  }
 
 
   //Use this to create a colorized number string based on the % compared to the max value.

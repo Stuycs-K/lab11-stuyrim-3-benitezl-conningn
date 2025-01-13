@@ -6,7 +6,7 @@ public class MathNerd extends Adventurer{
   *with all parameters.*/
   public MathNerd(String name, int hp, String language){
     super(name,hp);
-    caffeineMax = 12;
+    caffeineMax = 10;
     caffeine = caffeineMax/2;
     preferredLanguage = language;
   }

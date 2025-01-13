@@ -1,13 +1,13 @@
 public class HistoryNerd extends Adventurer{
-  int caffeine, caffeineMax;
+  int Amsco_Notes, Amsco_Notes_Max;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public HistoryNerd(String name, int hp, String language){
     super(name,hp);
-    caffeineMax = 12;
-    caffeine = caffeineMax/2;
+    caffeineMax = 10;
+    Amsco_Notes = caffeineMax/2;
     preferredLanguage = language;
   }
 

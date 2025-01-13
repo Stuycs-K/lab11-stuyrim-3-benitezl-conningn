@@ -1,13 +1,29 @@
 public class Dean extends Adventurer{
-  int caffeine, caffeineMax;
+  int happiness, happinessMax;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public Dean(String name, int hp, String language){
+  public CodeWarrior(String name, int hp, String language){
     super(name,hp);
     caffeineMax = 12;
     caffeine = caffeineMax/2;
+    preferredLanguage = language;
+  }
+
+  public CodeWarrior(String name, int hp){
+    this(name,hp,"c++");
+  }
+
+  public CodeWarrior(String name){
+    this(name,24);
+  }
+
+
+  public Dean(String name, int hp, String language){
+    super(name,hp);
+    happinessMax = 20;
+    happiness = happinessMax/2;
     preferredLanguage = language;
   }
 
@@ -29,34 +45,41 @@ public class Dean extends Adventurer{
   }
 
   public int getSpecial(){
-    return caffeine;
+    return happiness;
   }
 
   public void setSpecial(int n){
-    caffeine = n;
+    happiness = n;
   }
 
   public int getSpecialMax(){
-    return caffeineMax;
+    return happinessMax;
   }
 
-  /*Deal 2-7 damage to opponent, restores 2 caffeine*/
+  /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
+
     return "";
   }
 
-  /*Deal 3-12 damage to opponent, only if caffeine is high enough.
-  *Reduces caffeine by 8.
+  /*Deal 3-12 damage to opponent, only if happiness is high enough.
+  *Reduces happiness by 8.
   */
   public String specialAttack(Adventurer other){
-    return "";
+    if(happiness < 5){
+      other.setSpecial(other.getSpecial() - 2);
+      setSpecial(getSpecial() + 2);
+      return "Are you listening to music and relaxing during your free period!? Give me those airpods!";
+    }
+
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
+    other.setHp(other.getHP + 5);
     return "";
   }
   /*Restores 6 special and 1 hp to self.*/
   public String support(){
-    return "";
+
   }
 }
