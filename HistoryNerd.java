@@ -1,27 +1,14 @@
 public class HistoryNerd extends Adventurer{
   int Amsco_Notes, Amsco_Notes_Max;
-  String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public HistoryNerd(String name, int hp, String language){
-    super(name,hp);
-    caffeineMax = 10;
-    Amsco_Notes = caffeineMax/2;
-    preferredLanguage = language;
-  }
-
   public HistoryNerd(String name, int hp){
-    this(name,hp,"c++");
+    super(name,hp);
+    happinessMax = 10;
+    Amsco_Notes = happinessMax/2;
   }
 
-  public HistoryNerd(String name){
-    this(name,24);
-  }
-
-  public HistoryNerd(){
-    this("Carmack");
-  }
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
@@ -29,24 +16,24 @@ public class HistoryNerd extends Adventurer{
   }
 
   public int getSpecial(){
-    return caffeine;
+    return happiness;
   }
 
   public void setSpecial(int n){
-    caffeine = n;
+    happiness = n;
   }
 
   public int getSpecialMax(){
-    return caffeineMax;
+    return happinessMax;
   }
 
-  /*Deal 2-7 damage to opponent, restores 2 caffeine*/
+  /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
     return "";
   }
 
-  /*Deal 3-12 damage to opponent, only if caffeine is high enough.
-  *Reduces caffeine by 8.
+  /*Deal 3-12 damage to opponent, only if happiness is high enough.
+  *Reduces happiness by 8.
   */
   public String specialAttack(Adventurer other){
     return "";
