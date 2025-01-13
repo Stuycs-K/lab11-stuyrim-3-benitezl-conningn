@@ -150,6 +150,8 @@ public class Game{
     //If only 1 enemy is added it should be the boss class.
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
+    enemies.add(new Dean("Mr.Skinner", 25);
+    enemies.add(new Teacher("Ms.Whitiker", 20))
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     //YOUR CODE HERE
     /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -157,6 +159,10 @@ public class Game{
     //Adventurers you control:
     //Make an ArrayList of Adventurers and add 2-4 Adventurers to it.
     ArrayList<Adventurer> party = new ArrayList<Adventurer>();
+
+    party.add(new CodeNerd("Collin", 15));
+    party.add(new HistoryNerd("Nina",15));
+    party.add(new MathNerd("Spencer", 15));
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     //YOUR CODE HERE
     /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/

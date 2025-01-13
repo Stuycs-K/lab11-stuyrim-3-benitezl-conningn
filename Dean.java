@@ -4,15 +4,10 @@ public class Dean extends Adventurer{
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public Dean(String name, int hp, String language){
+  public Dean(String name, int hp){
     super(name,hp);
     happinessMax = 20;
     happiness = happinessMax/2;
-    preferredLanguage = language;
-  }
-
-  public Dean(String name, int hp){
-    this(name,hp,"c++");
   }
 
   public Dean(String name){
