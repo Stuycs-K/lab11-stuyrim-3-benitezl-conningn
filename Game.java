@@ -73,12 +73,25 @@ public class Game{
     *Caffeine: 20 Mana: 10   Snark: 1
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
-    public static void drawParty(ArrayList<Adventurer> party,int startRow){
+    public static void drawParty(ArrayList<Adventurer> party, int startRow) {
+    if (party.size() > 4) return;
 
-      /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-      //YOUR CODE HERE
-      /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    StringBuilder[] lines = new StringBuilder[4];
+    for (int i = 0; i < lines.length; i++) {
+      lines[i] = new StringBuilder();
     }
+
+    for (Adventurer adventurer : party) {
+      lines[0].append(adventurer.getName()).append("     ");
+      lines[1].append("HP: ").append(adventurer.getHP()).append("   ");
+      lines[2].append(adventurer.getSpecial()).append(": ").append(adventurer.getSpecialStatValue()).append("   ");
+    }
+
+    for (int i = 0; i < 3; i++) {
+      drawText(lines[i].toString(), startRow + i, 1);
+    }
+    drawText("***THIS ROW INTENTIONALLY LEFT BLANK***", startRow + 3, 1);
+  }
 
 
   //Use this to create a colorized number string based on the % compared to the max value.
