@@ -53,7 +53,7 @@ public class HistoryNerd extends Adventurer{
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
-    return "";
+    return "History tutoring for you " + other.getName() + "!";
   }
   /*Restores 6 special and 1 hp to self.*/
   public String support(){

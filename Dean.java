@@ -4,22 +4,6 @@ public class Dean extends Adventurer{
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public CodeWarrior(String name, int hp, String language){
-    super(name,hp);
-    caffeineMax = 12;
-    caffeine = caffeineMax/2;
-    preferredLanguage = language;
-  }
-
-  public CodeWarrior(String name, int hp){
-    this(name,hp,"c++");
-  }
-
-  public CodeWarrior(String name){
-    this(name,24);
-  }
-
-
   public Dean(String name, int hp, String language){
     super(name,hp);
     happinessMax = 20;
@@ -41,7 +25,7 @@ public class Dean extends Adventurer{
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
-    return "";
+    return "Steal Your Airpods";
   }
 
   public int getSpecial(){
@@ -58,8 +42,8 @@ public class Dean extends Adventurer{
 
   /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
-
-    return "";
+    other.setHP(other.getHP() - 2);
+    return "Hey! This isnt your free period! Get to class!";
   }
 
   /*Deal 3-12 damage to opponent, only if happiness is high enough.
@@ -69,17 +53,19 @@ public class Dean extends Adventurer{
     if(happiness < 5){
       other.setSpecial(other.getSpecial() - 2);
       setSpecial(getSpecial() + 2);
-      return "Are you listening to music and relaxing during your free period!? Give me those airpods!";
+      other.setHP(other.getHP() - 3);
+      return "Are you listening to music and relaxing during your free period!? Give me those airpods " + other.getName() + "!";
+
     }
 
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
-    other.setHp(other.getHP + 5);
-    return "";
+    other.setHp(other.getHP + 3);
+    return other.getName + ", Im here to help!";
   }
-  /*Restores 6 special and 1 hp to self.*/
-  public String support(){
 
+  public String support(){
+    return "I have a free period! Let me watch the knicks game!"
   }
 }
