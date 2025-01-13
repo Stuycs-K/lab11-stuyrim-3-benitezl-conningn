@@ -18,10 +18,9 @@ public class Game{
   //Display a line of text starting at
   //(columns and rows start at 1 (not zero) in the terminal)
   //use this method in your other text drawing methods to make things simpler.
-  public static void drawText(String s,int startRow, int startCol){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  public static void drawText(String s, int startRow, int startCol) {
+    System.out.print("\033[" + startRow + ";" + startCol + "H");
+    System.out.print(s);
   }
 
   /*Use this method to place text on the screen at a particular location.
