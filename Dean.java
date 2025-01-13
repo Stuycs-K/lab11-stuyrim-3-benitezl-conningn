@@ -4,6 +4,22 @@ public class Dean extends Adventurer{
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
+  public CodeWarrior(String name, int hp, String language){
+    super(name,hp);
+    caffeineMax = 12;
+    caffeine = caffeineMax/2;
+    preferredLanguage = language;
+  }
+
+  public CodeWarrior(String name, int hp){
+    this(name,hp,"c++");
+  }
+
+  public CodeWarrior(String name){
+    this(name,24);
+  }
+
+
   public Dean(String name, int hp, String language){
     super(name,hp);
     happinessMax = 20;
@@ -59,6 +75,7 @@ public class Dean extends Adventurer{
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
+    other.setHp(other.getHP + 5);
     return "";
   }
   /*Restores 6 special and 1 hp to self.*/
