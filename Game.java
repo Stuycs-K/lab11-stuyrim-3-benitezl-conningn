@@ -33,10 +33,26 @@ public class Game{
   *@param width the number of characters per row
   *@param height the number of rows
   */
-  public static void TextBox(int row, int col, int width, int height, String text){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  public static void TextBox(int row, int col, int width, int height, String text) {
+    String[] words = text.split(" ");
+    int currentRow = row;
+    int currentCol = col;
+
+    for (String word : words) {
+      if (currentCol + word.length() > col + width) {
+        currentRow++;
+        currentCol = col;
+      }
+      if (currentRow >= row + height) {
+        break;
+      }
+      drawText(word + " ", currentRow, currentCol);
+      currentCol += word.length() + 1;
+    }
+
+    for (int i = currentRow; i < row + height; i++) {
+      drawText(" ".repeat(width), i, col);
+    }
   }
 
 
