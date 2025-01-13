@@ -11,17 +11,7 @@ public class CodeNerd extends Adventurer{
     preferredLanguage = language;
   }
 
-  public CodeNerd(String name, int hp){
-    this(name,hp,"c++");
-  }
 
-  public CodeNerd(String name){
-    this(name,24);
-  }
-
-  public CodeNerd(){
-    this("Carmack");
-  }
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){

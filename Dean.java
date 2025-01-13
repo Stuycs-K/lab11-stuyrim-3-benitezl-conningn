@@ -1,6 +1,6 @@
 public class Dean extends Adventurer{
   int happiness, happinessMax;
-  String preferredLanguage;
+
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
@@ -10,13 +10,6 @@ public class Dean extends Adventurer{
     happiness = happinessMax/2;
   }
 
-  public Dean(String name){
-    this(name,24);
-  }
-
-  public Dean(){
-    this("Carmack");
-  }
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){

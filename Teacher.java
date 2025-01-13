@@ -12,13 +12,7 @@ public class Teacher extends Adventurer{
 
 
 
-  public Teacher(String name){
-    this(name,24);
-  }
 
-  public Teacher(){
-    this("Carmack");
-  }
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
