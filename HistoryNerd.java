@@ -1,18 +1,25 @@
 public class HistoryNerd extends Adventurer{
-  int Amsco_Notes, Amsco_Notes_Max;
+  int happiness, happinessMax, GPA;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public HistoryNerd(String name, int hp){
     super(name,hp);
     happinessMax = 10;
-    Amsco_Notes = happinessMax/2;
+    happiness = happinessMax/2;
+    GPA = 85;
+  }
+  public int getGPA(){
+    return GPA;
   }
 
+  public int setGPA(int n){
+    GPA =  n;
+  }
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
-    return "";
+    return "National History Day Project";
   }
 
   public int getSpecial(){

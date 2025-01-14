@@ -1,42 +1,49 @@
 public class CodeNerd extends Adventurer{
-  int happiness, happinessMax;
+  int happiness, happinessMax, GPA;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public CodeNerd(String name, int hp, String language){
     super(name,hp);
-    caffeineMax = 10;
-    caffeine = caffeineMax/2;
+    happinessMax = 10;
+    happiness = happinessMax/2;
     preferredLanguage = language;
+    GPA = 85;
+  }
+  public int getGPA(){
+    return GPA;
   }
 
+  public int setGPA(int n){
+    GPA =  n;
+  }
 
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
-    return "";
+    return "Advent Of Code";
   }
 
   public int getSpecial(){
-    return caffeine;
+    return happiness;
   }
 
   public void setSpecial(int n){
-    caffeine = n;
+    happiness = n;
   }
 
   public int getSpecialMax(){
-    return caffeineMax;
+    return happinessMax;
   }
 
-  /*Deal 2-7 damage to opponent, restores 2 caffeine*/
+  /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
     return "";
   }
 
-  /*Deal 3-12 damage to opponent, only if caffeine is high enough.
-  *Reduces caffeine by 8.
+  /*Deal 3-12 damage to opponent, only if happiness is high enough.
+  *Reduces happiness by 8.
   */
   public String specialAttack(Adventurer other){
     return "";

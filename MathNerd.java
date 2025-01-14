@@ -1,5 +1,5 @@
 public class MathNerd extends Adventurer{
-  int happiness, happinessMax;
+  int happiness, happinessMax, GPA;
 
 
   /*the other constructors ultimately call the constructor
@@ -8,14 +8,22 @@ public class MathNerd extends Adventurer{
     super(name,hp);
     happinessMax = 10;
     happiness = happinessMax/2;
+    GPA = 85;
+  }
+  public int getGPA(){
+    return GPA;
   }
 
+  public int setGPA(int n){
+    GPA =  n;
+  }
 
 
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
-    return "";
+    return "Extra Credit";
   }
+
 
   public int getSpecial(){
     return happiness;
@@ -31,6 +39,7 @@ public class MathNerd extends Adventurer{
 
   /*Deal 2-7 damage to opponent, restores 2 happiness*/
   public String attack(Adventurer other){
+
     return "";
   }
 
@@ -38,6 +47,7 @@ public class MathNerd extends Adventurer{
   *Reduces happiness by 8.
   */
   public String specialAttack(Adventurer other){
+
     return "";
   }
   /*Restores 5 special to other*/
