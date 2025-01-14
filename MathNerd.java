@@ -1,5 +1,5 @@
 public class MathNerd extends Adventurer{
-  int happiness, happinessMax, GPA;
+  int happiness, happinessMax, GPA, HW;
 
 
   /*the other constructors ultimately call the constructor
@@ -17,6 +17,20 @@ public class MathNerd extends Adventurer{
   public int setGPA(int n){
     GPA =  n;
   }
+
+  public int assignHW{
+
+  }
+
+  public int getHW{
+    if()
+
+
+
+    return
+  }
+
+
 
 
   /*The next 8 methods are all required because they are abstract:*/

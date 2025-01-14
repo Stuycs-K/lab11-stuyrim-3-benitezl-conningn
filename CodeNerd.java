@@ -1,5 +1,5 @@
 public class CodeNerd extends Adventurer{
-  int happiness, happinessMax, GPA;
+  int happiness, happinessMax, GPA, HW;
   String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
@@ -18,6 +18,28 @@ public class CodeNerd extends Adventurer{
   public int setGPA(int n){
     GPA =  n;
   }
+
+  public int assignHW(int type, int duration){
+
+  }
+
+  public int getHW{
+    if()
+
+
+
+    return
+  }
+
+
+
+
+
+
+
+
+
+
 
 
   /*The next 8 methods are all required because they are abstract:*/

@@ -17,6 +17,24 @@ public class HistoryNerd extends Adventurer{
     GPA =  n;
   }
 
+  public int assignHW{
+
+  }
+
+  public int getHW{
+    if()
+
+
+
+    return
+  }
+
+
+
+
+
+
+
   /*The next 8 methods are all required because they are abstract:*/
   public String getSpecialName(){
     return "National History Day Project";
@@ -46,7 +64,9 @@ public class HistoryNerd extends Adventurer{
     return "";
   }
   /*Restores 5 special to other*/
-  public String support(Adventurer other){
+  public String support(Adventurer other){\
+    this.setGPA(getGPA - 1);
+    if(other.hwType)
     return "History tutoring for you " + other.getName() + "!";
   }
   /*Restores 6 special and 1 hp to self.*/
