@@ -84,7 +84,7 @@ public class Game{
     for (Adventurer adventurer : party) {
       lines[0].append(adventurer.getName()).append("     ");
       lines[1].append("HP: ").append(adventurer.getHP()).append("   ");
-      lines[2].append(adventurer.getSpecial()).append(": ").append(adventurer.getSpecialStatValue()).append("   ");
+      lines[2].append(adventurer.getSpecial()).append(": ").append(adventurer.getSpecial()).append("   ");
     }
 
     for (int i = 0; i < 3; i++) {
@@ -114,9 +114,6 @@ public class Game{
   public static void drawScreen(){
 
     drawBackground();
-    drawParty(party);
-    drawParty(enemies);
-    Text.go();
 
     //draw player party
 
