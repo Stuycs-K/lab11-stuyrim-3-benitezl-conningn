@@ -166,8 +166,8 @@ public class Game{
     //If only 1 enemy is added it should be the boss class.
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
-    enemies.add(new Dean("Mr.Skinner", 25);
-    enemies.add(new Teacher("Ms.Whitiker", 20))
+    enemies.add(new Dean("Mr.Skinner", 25));
+    enemies.add(new Teacher("Ms.Whitiker", 20));
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     //YOUR CODE HERE
     /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
