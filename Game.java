@@ -12,7 +12,6 @@ public class Game{
   //Display the borders of your screen that will not change.
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
-<<<<<<< HEAD
     System.out.print("┌");
     for(int i =0; i < 78; i++){
       System.out.print("─");
@@ -29,9 +28,7 @@ public class Game{
     for(int i =0; i < 78; i++){
       System.out.print("─");
     }
-=======
-    System.out.println("\033[107m\033[30m");
->>>>>>> 4434171a8f27c30206d607bcf36f5b8ddd696656
+    System.out.println("┘");
   }
 
   //Display a line of text starting at
