@@ -28,7 +28,6 @@ public class Game{
     for(int i =0; i < 78; i++){
       System.out.print("─");
     }
-    System.out.println("┘");
   }
 
   //Display a line of text starting at
