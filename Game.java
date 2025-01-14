@@ -12,7 +12,23 @@ public class Game{
   //Display the borders of your screen that will not change.
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
-    System.out.println("\033[107m\033[30m");
+    System.out.print("┌");
+    for(int i =0; i < 78; i++){
+      System.out.print("─");
+    }
+    System.out.println("┐");
+    for(int i = 0; i < 28; i ++){
+      System.out.print("│");
+      for(int j = 0; j < 78; j++){
+        System.out.print(" ");
+      }
+      System.out.println("│");
+    }
+    System.out.print("└");
+    for(int i =0; i < 78; i++){
+      System.out.print("─");
+    }
+    System.out.println("┘");
   }
 
   //Display a line of text starting at
