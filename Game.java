@@ -12,23 +12,7 @@ public class Game{
   //Display the borders of your screen that will not change.
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
-    System.out.print("┌");
-    for(int i =0; i < 78; i++){
-      System.out.print("─");
-    }
-    System.out.println("┐");
-    for(int i = 0; i < 28; i ++){
-      System.out.print("│");
-      for(int j = 0; j < 78; j++){
-        System.out.print(" ");
-      }
-      System.out.println("│");
-    }
-    System.out.print("└");
-    for(int i =0; i < 78; i++){
-      System.out.print("─");
-    }
-    System.out.println("┘");
+    System.out.println("\033[107m\033[30m");
   }
 
   //Display a line of text starting at
@@ -132,12 +116,15 @@ public class Game{
     drawBackground();
     drawParty(party);
     drawParty(enemies);
+    Text.go();
 
     //draw player party
 
     //draw enemy party
 
   }
+
+
 
   public static String userInput(Scanner in){
       //Move cursor to prompt location
@@ -168,8 +155,8 @@ public class Game{
     //If only 1 enemy is added it should be the boss class.
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
-    enemies.add(new Dean("Mr.Skinner", 25));
-    enemies.add(new Teacher("Ms.Whitiker", 20));
+    enemies.add(new Dean("Mr.Skinner", 25);
+    enemies.add(new Teacher("Ms.Whitiker", 20))
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     //YOUR CODE HERE
     /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/

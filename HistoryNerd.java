@@ -1,12 +1,12 @@
 public class HistoryNerd extends Adventurer{
-  int Amsco_Notes, Amsco_Notes_Max;
+  int happiness, happinessMax;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public HistoryNerd(String name, int hp){
     super(name,hp);
     happinessMax = 10;
-    Amsco_Notes = happinessMax/2;
+    happiness = happinessMax/2;
   }
 
 
