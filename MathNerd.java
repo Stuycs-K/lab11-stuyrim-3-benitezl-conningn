@@ -4,7 +4,7 @@ public class MathNerd extends Adventurer{
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public MathNerd(String name, int hp, String language){
+  public MathNerd(String name, int hp){
     super(name,hp);
     happinessMax = 10;
     happiness = happinessMax/2;

@@ -114,6 +114,8 @@ public class Game{
   public static void drawScreen(){
 
     drawBackground();
+    drawParty(party);
+    drawParty(enemies);
 
     //draw player party
 
