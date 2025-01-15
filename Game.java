@@ -252,6 +252,17 @@ public class Game{
         }
         //done with one party member
       }else{
+
+
+        String[] hwTypes = {Math, History, Coding};
+        String type = hwTypes[(int)(Math.random() * 3) + 1];
+        int duration = (int)()(Math.random() * 4) + 2)
+        HW Homework = new HW (type, duration);
+
+
+
+
+
         //not the party turn!
 
 

@@ -1,6 +1,6 @@
 public class Dean extends Adventurer{
   int happiness, happinessMax;
-
+  ArrayList Homework;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/

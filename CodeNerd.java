@@ -1,6 +1,7 @@
 public class CodeNerd extends Adventurer{
   int happiness, happinessMax, GPA, HW;
   String preferredLanguage;
+  ArrayList<HW> Homework;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
@@ -19,17 +20,19 @@ public class CodeNerd extends Adventurer{
     GPA =  n;
   }
 
-  public int assignHW(int type, int duration){
 
+
+
+  public String getHW(){
+    String output = "";
+    for(int i=0;i<Homework.length();i++) {
+      output += ArrayList.get(i);
+
+
+    }
+    return output;
   }
-
-  public int getHW{
-    if()
-
-
-
-    return
-  }
+  public String
 
 
 
