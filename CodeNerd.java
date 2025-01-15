@@ -26,7 +26,7 @@ public class CodeNerd extends Adventurer{
   public String getHW(){
     String output = "";
     for(int i=0;i<Homework.length();i++) {
-      HW current = ArrayList.get(i);
+      HW current = Homework.get(i);
       output += " HW"+ (i+1) + " Type: " + current.getTypeS() + " due date: " + current.getDuration():
     }
     return output;
@@ -35,7 +35,7 @@ public class CodeNerd extends Adventurer{
 
 
   public String doHW(int number){
-    return ;
+    Homework.get(number - 1);
   }
 
 
