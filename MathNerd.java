@@ -18,17 +18,7 @@ public class MathNerd extends Adventurer{
     GPA =  n;
   }
 
-  public int assignHW{
 
-  }
-
-  public int getHW{
-    if()
-
-
-
-    return
-  }
 
 
 
@@ -52,7 +42,7 @@ public class MathNerd extends Adventurer{
   }
 
   /*Deal 2-7 damage to opponent, restores 2 happiness*/
-  public String attack(Adventurer other){
+  public String doHW(Adventurer other){
 
     return "";
   }

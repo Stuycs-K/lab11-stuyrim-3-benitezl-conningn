@@ -26,13 +26,17 @@ public class CodeNerd extends Adventurer{
   public String getHW(){
     String output = "";
     for(int i=0;i<Homework.length();i++) {
-      output += ArrayList.get(i);
-
-
+      HW current = ArrayList.get(i);
+      output += " HW"+ (i+1) + " Type: " + current.getTypeS() + " due date: " + current.getDuration():
     }
     return output;
   }
-  public String
+
+
+
+  public String doHW(int number){
+    return ;
+  }
 
 
 
@@ -63,9 +67,7 @@ public class CodeNerd extends Adventurer{
   }
 
   /*Deal 2-7 damage to opponent, restores 2 happiness*/
-  public String attack(Adventurer other){
-    return "";
-  }
+
 
   /*Deal 3-12 damage to opponent, only if happiness is high enough.
   *Reduces happiness by 8.

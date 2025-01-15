@@ -1,6 +1,6 @@
 public class Dean extends Adventurer{
   int happiness, happinessMax;
-  ArrayList Homework;
+
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
@@ -9,6 +9,10 @@ public class Dean extends Adventurer{
     happinessMax = 20;
     happiness = happinessMax/2;
   }
+
+
+
+
 
 
   /*The next 8 methods are all required because they are abstract:*/

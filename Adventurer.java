@@ -16,7 +16,9 @@ public abstract class Adventurer{
   public abstract int getSpecialMax();
   public abstract void setSpecial(int n);
 
-
+  public void assignHW(String recipient, ) {
+    recipient.
+  }
 
 
 
