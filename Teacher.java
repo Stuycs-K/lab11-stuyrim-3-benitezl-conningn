@@ -4,7 +4,7 @@ public class Teacher extends Adventurer{
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
-  public Teacher(String name, int hp, String name){
+  public Teacher(String name, int hp){
     super(name,hp);
     happinessMax = 10;
     happiness = happinessMax/2;
