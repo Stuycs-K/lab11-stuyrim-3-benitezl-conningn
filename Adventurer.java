@@ -9,6 +9,19 @@ public abstract class Adventurer{
   consumable resource (mana/rage/money/witts etc)
   */
 
+
+  public String getHW(){
+    String output = "";
+    for(int i=0;i<Homework.length();i++) {
+      HW current = Homework.get(i);
+      output += " HW"+ (i+1) + " Type: " + current.getTypeS() + " due date: " + current.getDuration():
+    }
+    return output;
+  }
+
+
+
+
   //give it a short name (fewer than 13 characters)
   public abstract String getSpecialName();
   //accessor methods

@@ -22,7 +22,6 @@ public class CodeNerd extends Adventurer{
 
 
 
-
   public String getHW(){
     String output = "";
     for(int i=0;i<Homework.length();i++) {
@@ -32,19 +31,19 @@ public class CodeNerd extends Adventurer{
     return output;
   }
 
-
-
   public String doHW(int number){
 
     if(Homework.getTypeS().equals("Coding")) {
-
+      this.setGPA(getGPA()+2);
+      Teacher
     }; else{
-      Teacher.setHP(Teacher.getHP() - 1);
+      this.setGPA(getGPA()+1);
+
     }
-    return Homework.getHW();
-
-
+    Teacher.setHP(Teacher.getHP() - 1);
+    return "Your GPA is now: " + getGPA() + "\n" + Homework.getHW();
   }
+
 
 
 

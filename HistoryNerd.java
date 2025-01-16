@@ -1,6 +1,6 @@
 public class HistoryNerd extends Adventurer{
   int happiness, happinessMax, GPA;
-
+  ArrayList<HW> Homework;
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
   public HistoryNerd(String name, int hp){
@@ -17,7 +17,28 @@ public class HistoryNerd extends Adventurer{
     GPA =  n;
   }
 
+  public String getHW(){
+    String output = "";
+    for(int i=0;i<Homework.length();i++) {
+      HW current = Homework.get(i);
+      output += " HW"+ (i+1) + " Type: " + current.getTypeS() + " due date: " + current.getDuration():
+    }
+    return output;
+  }
 
+
+  public String doHW(int number){
+
+    if(Homework.getTypeS().equals("Coding")) {
+      this.setGPA(getGPA()+2);
+      Teacher
+    }; else{
+      this.setGPA(getGPA()+1);
+
+    }
+    Teacher.setHP(Teacher.getHP() - 1);
+    return "Your GPA is now: " + getGPA() + "\n" + Homework.getHW();
+  }
 
 
 
