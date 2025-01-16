@@ -35,7 +35,15 @@ public class CodeNerd extends Adventurer{
 
 
   public String doHW(int number){
-    Homework.get(number - 1);
+
+    if(Homework.getTypeS().equals("Coding")) {
+
+    }; else{
+      Teacher.setHP(Teacher.getHP() - 1);
+    }
+    return Homework.getHW();
+
+
   }
 
 

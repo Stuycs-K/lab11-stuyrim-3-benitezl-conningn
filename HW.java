@@ -15,9 +15,7 @@ public class HW{
   return this.TypeS;
 }
 
-  public int getTypeI(){
-    return this.TypeI;
-  }
+
 
 public int getDuration(){
   return this.Duration;
